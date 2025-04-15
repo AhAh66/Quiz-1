@@ -57,7 +57,6 @@ function checkAnser(selectedOption,correctAnswer){
     allOption.forEach(Option=>Option.style.pointerEvents ="none");
 
     if(selectedOption.textContent === decodeHtml(correctAnswer)){
-     //   selectedOption.style.backgroundColor="lightgreen";
      selectedOption.classList.add("correct");
         correctCount++
     }
@@ -78,24 +77,13 @@ function checkAnser(selectedOption,correctAnswer){
             show(questions[currentIndex],currentIndex+1,questions.length)
         }
         else {
-        //     container.innerHTML=''
-        //     container.innerHTML=`
-        //          <div class="result-container" style="display: none;">
-        
-        //         <h2>Congratulations! 😄 </h2>
-        
-        //         <p id="final-score">you got ${correctCount} of ${questions.length}</p>
-        //     <button id="restart">restart</button>
-        // </div>
-            
-        //     `
             let finalresult=document.querySelector(".result-container")
             container.style.display = "none";
             finalresult.style.display = "block";
             let finalScore = document.querySelector("#final-score"); // ← أصلحناه هنا
             finalScore.innerHTML = `You got ${correctCount} out of ${questions.length}`;
             questionTopic.innerHTML = '';
-            // score.textContent = `Result: ${correctCount} of ${questions.length}`;
+          
         }
         
     },2000)
@@ -132,7 +120,5 @@ var typed = new Typed('.typeing', {
     typeSpeed: 90
   });
   
-//make home page better
-//1- write latter one by one
-//2-opicty when go to quiz page
+
 
