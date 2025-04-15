@@ -1,0 +1,203 @@
+:root{
+--primary-color: #3a0ca3;
+--accent-color: #7209b7;
+--correct-color: #4cc9f0;
+--dark-bg: #1b1b2f;
+--light-text: #f0f0f0;
+--option-bg: #2b2b3d;
+--highlight: #00f5d4;
+--question-yellow: #ffe66d;
+--transition: all 300ms ease-in-out;
+--org:#EF6C00;
+}
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    transition: 3s ease-in-out;
+  }
+  /* 
+
+.result-header h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#final-score {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#feedback {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+
+
+#restart:hover {
+    background-color: #e67e22;
+} */
+
+#restart {
+    background-color: var(--org);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.result-container {
+    font-size: 20px;
+    text-align: center;
+    background-color:var(--option-bg);
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  .container {
+    background-color: #2f2f46;
+border-radius: 1rem;
+box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 500px;
+    z-index: 3;
+    overflow: hidden;
+  width: 600px;
+  height: 500px;
+
+  
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  display: none; /* نخليها مخفية بالبداية */
+
+  }
+
+  .quiz-head {
+    background: linear-gradient(135deg, #280546, #260862);
+    color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left; /* تأكد من أن كل النصوص تبدأ من اليسار */
+   /* box-shadow: 10px 0 20px rgba(142, 45, 126, 0.6);  لمعة حول الهيدر */
+    
+  }
+
+  .score {
+    font-weight: bold;
+    font-size: 18px;
+margin-bottom: 20px;
+  }
+
+  .topic {
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  .quiz-question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--question-yellow);
+  
+  }
+
+  .quiz-body {
+    padding: 20px;
+  }
+
+
+  .options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .options li {
+    background-color: var(--option-bg);
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  
+    font-weight: 600;
+    color: var(--light-text);
+    border: 1px solid transparent;
+    transition: var(--transition);
+  }
+
+  .options li:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    transform: scale(1.02);
+  }
+
+  .options li.correct {
+    background-color: #70e000;
+color: #1a1a1a;
+  }
+
+  .options li.incorrect {
+    background-color: #ff6b6b;
+    color: #fff;
+  }
+.home-container{
+    /* border: 1px solid white; */
+    display: flex;
+flex-direction: column;
+ align-items: center;
+    padding: 20px;
+    transition: opacity 1s ease;
+ 
+}
+h1{
+    margin-bottom: 50px;
+}
+  #start ,#restart{
+    padding: 15px 60px;
+  border-radius: 15px;
+  font-size: 25px;
+  background-color: var(--org);
+  }
+  .show-quiz{
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .home-container.hide-home {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .quiz-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+    display: none;
+  }
+  
+  .quiz-container.show-quiz {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
